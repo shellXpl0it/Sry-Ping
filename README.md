@@ -1,103 +1,80 @@
-# SryPing - Erweiterte Ping-Anwendung
+# Sry-Ping
 
-## Übersicht
+A modern, feature-rich, cross-platform ping utility built with Python and the Rich library. Sry-Ping provides a visually appealing and informative way to check host latency and gather network information.
 
-SryPing ist ein vielseitiges und erweiterbares Ping-Dienstprogramm, das über die Standardfunktionen hinausgeht und erweiterte Funktionen für Netzwerkdiagnose und -überwachung bietet. Es wurde mit einer benutzerfreundlichen Oberfläche, Echtzeitstatistiken und anpassbaren Einstellungen entwickelt und ist sowohl für Anfänger als auch für erfahrene Netzwerkadministratoren geeignet.
+![Sry-Ping Demo](https://i.imgur.com/your-demo-image.gif) <!-- Placeholder for a demo GIF -->
 
-## Funktionen
+## ✨ Features
 
--   **Visuell ansprechende Oberfläche:** Verwendet die Rich-Bibliothek für eine farbenfrohe und informative Konsolenausgabe.
--   **Adaptive Ping-Modi:** Bietet "Smart"- und "Extended"-Modi, um den Detaillierungsgrad der Ping-Informationen zu steuern.
--   **Echtzeitstatistiken:** Zeigt Live-Ping-Statistiken an, einschließlich Latenz, Paketverlust und mehr.
--   **ASN- und Organisations-Lookup:** Ruft ASN- (Autonomous System Number) und Organisationsinformationen für die Ziel-IP-Adresse ab.
--   **Konfigurierbare Einstellungen:** Ermöglicht es Benutzern, Einstellungen wie den Ping-Modus zu ändern und diese für zukünftige Sitzungen zu speichern.
--   **Fehlerbehandlung:** Bietet eine robuste Fehlerbehandlung für häufige Probleme wie ungültige Hostnamen oder Netzwerkfehler.
--   **Unterbrechungsgesteuerter Betrieb:** Ermöglicht es Benutzern, den Ping-Prozess jederzeit durch Drücken einer beliebigen Taste zu stoppen.
+*   **Live Statistics:** View real-time ping statistics including current, min, max, and average latency, plus packet loss percentage.
+*   **Host Information:** Automatically resolves the IP address and retrieves ASN (Autonomous System Number) and organization details for the target host.
+*   **Two Display Modes:**
+    *   **Smart Mode:** A clean, live-updating panel showing key statistics.
+    *   **Extended Mode:** A verbose, scrolling output showing the result of each individual ping, similar to the traditional `ping` command.
+*   **Cross-Platform:** Works on both Windows and Unix-like systems (Linux, macOS).
+*   **User-Friendly Interface:** A simple, menu-driven TUI for easy navigation and operation.
+*   **Configuration Persistence:** Your chosen ping mode is saved and loaded automatically between sessions.
 
-## Installation
+## 📦 Installation
 
-### Voraussetzungen
-
--   Python 3.6 oder höher
--   pip (Python Package Installer)
-
-### Installationsschritte
-
-1.  **Klonen Sie das Repository:**
-
+1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/Arctis/SryPing.git
-    cd SryPing
+    git clone https://github.com/your-username/sry-ping.git
+    cd sry-ping
     ```
 
-2.  **Installieren Sie die erforderlichen Bibliotheken:**
-
+2.  **Install the required Python libraries:**
+    The script will prompt you if dependencies are missing, but you can install them ahead of time.
     ```bash
     pip install requests pythonping rich
     ```
 
-### Optionale Abhängigkeiten
+## 🚀 Usage
 
--   `msvcrt` (nur Windows): Für die Eingabe ohne Echo. Wird automatisch verwendet, falls verfügbar.
+Run the script from your terminal:
+```bash
+python sry.py
+```
 
-## Verwendung
+You will be greeted with the main menu:
 
-1.  **Führen Sie die Anwendung aus:**
+*   **Start Ping:** Prompts you to enter a hostname (e.g., `google.com` or `8.8.8.8`) and begins the pinging process.
+*   **Settings:** Allows you to toggle between `Smart` and `Extended` ping modes.
+*   **Help:** Displays a help screen with usage instructions.
+*   **Quit:** Exits the application.
 
-    ```bash
-    python sry.py
-    ```
+While pinging, you can **press any key to stop** and return to the main menu.
 
-2.  **Hauptmenü:**
+## ⚙️ Configuration
 
-    -   Wählen Sie Optionen aus dem Hauptmenü, indem Sie die entsprechende Zahl oder den entsprechenden Buchstaben eingeben.
-    -   Verwenden Sie die Option "Ping starten", um einen Host zu pingen und Live-Statistiken anzuzeigen.
-    -   Verwenden Sie die Option "Einstellungen", um den Ping-Modus zu ändern.
-    -   Verwenden Sie die Option "Hilfe", um Anwendungsdetails anzuzeigen.
-    -   Verwenden Sie die Option "Beenden", um die Anwendung zu beenden.
+The application saves your preferred ping mode (`Smart` or `Extended`) in a `config.json` file in the same directory. You can edit this file directly or change the mode via the in-app settings menu.
 
-## Konfiguration
+---
 
-Die Anwendung speichert die Einstellungen in einer `config.json`-Datei. Die folgenden Einstellungen können konfiguriert werden:
+## 📜 License
 
--   `ping_mode`: Legt den Ping-Modus auf "Smart" oder "Extended" fest.
+**Copyright (c) 2025 shellXploit**
+**Proprietary License — Private Use Only**
 
-## Erweiterte Ping-Modi
+**Grant of Limited License**
+You (the Licensor) grant the Licensee a non-exclusive, non-transferable, revocable, personal license to use the Licensed Material solely for private, non-commercial, personal purposes on devices owned or controlled by the Licensee.
 
-SryPing bietet zwei verschiedene Ping-Modi, um den Detaillierungsgrad der Ping-Informationen anzupassen:
+**Prohibited Uses**
+The Licensee may not, under any circumstances:
 
--   **Smart-Modus:** In diesem Modus zeigt SryPing eine zusammengefasste Ansicht der Ping-Statistiken an, einschließlich der Anzahl der gesendeten und fehlgeschlagenen Pings sowie der minimalen, maximalen und durchschnittlichen Latenz.
+*   Modify, adapt, translate, or create derivative works of the Licensed Material.
+*   Distribute, publish, upload, share, sell, sublicense, rent, lease, or otherwise make the Licensed Material available to third parties.
+*   Remove, alter, or obscure any copyright, trademark, or other proprietary notices included with the Licensed Material.
+*   Use the Licensed Material for any commercial purpose, including offering it as part of a service or product for which a fee is charged.
 
--   **Extended-Modus:** Im Extended-Modus bietet SryPing detailliertere Informationen zu jedem Ping-Versuch. Zusätzlich zu den im Smart-Modus angezeigten Statistiken zeigt der Extended-Modus die Latenz für jeden einzelnen Ping an und gibt an, ob ein Ping fehlgeschlagen ist. Darüber hinaus löscht der Extended-Modus alle 10 Pings den Bildschirm, um die Ausgabe übersichtlich zu halten.
+**Ownership**
+All title, ownership rights, and intellectual property rights in the Licensed Material remain with the Licensor. No rights are granted except as expressly set forth in this License.
 
-## Fehlerbehandlung
+**Termination**
+This License is effective until terminated. The Licensor may terminate this License immediately if the Licensee breaches any term. Upon termination, the Licensee must cease all use of, and permanently delete or destroy, all copies of the Licensed Material in their possession or control and certify compliance on request.
 
-SryPing enthält eine umfassende Fehlerbehandlung, um einen reibungslosen Betrieb zu gewährleisten:
+**No Warranty**
+The Licensed Material is provided "AS IS" without warranty of any kind. The Licensor disclaims all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.
 
--   **Ungültige Hostnamen:** Wenn ein ungültiger Hostname angegeben wird, zeigt die Anwendung eine Fehlermeldung an und kehrt zum Hauptmenü zurück.
--   **Netzwerkfehler:** Bei Netzwerkfehlern wie Timeouts oder nicht erreichbaren Hosts zeigt die Anwendung eine Fehlermeldung an und setzt den Ping-Vorgang fort.
--   **ASN-Lookup-Fehler:** Wenn das Abrufen von ASN-Informationen fehlschlägt, zeigt die Anwendung eine Warnmeldung an und fährt mit dem Ping-Vorgang fort.
-
-## Fehlerbehebung
-
--   **Probleme bei der Installation:** Stellen Sie sicher, dass alle erforderlichen Bibliotheken mit `pip` installiert sind.
--   **Ping-Probleme:** Überprüfen Sie die Netzwerkverbindung und stellen Sie sicher,dass der Zielhost erreichbar ist.
--   **Darstellungsprobleme:** Stellen Sie sicher, dass Ihr Terminal die 256-Farben-Unterstützung für die Rich-Bibliothek unterstützt.
-
-## Mitwirkende
-
--   Arctis
-
-## Lizenz
-
-Dieses Projekt ist unter der MIT-Lizenz lizenziert.
-
-## Danksagung
-
--   Die Rich-Bibliothek für die Erstellung einer ansprechenden Konsolenoberfläche.
--   Die Python-Ping-Bibliothek für die Vereinfachung von Ping-Operationen.
--   Der ip-api.com-Dienst für die Bereitstellung von ASN- und Organisationsinformationen.
-
-## Logo
-
-Das Logo wurde mit Hilfe von DALL-E erstellt.
+**Limitation of Liability**
+To the maximum extent permitted by law, the Licensor is not liable for any indirect, incidental, consequential, special, punitive, or exemplary damages arising from the use or inability to use the Licensed Material.
