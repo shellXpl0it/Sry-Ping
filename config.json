@@ -1,3 +1,4 @@
 {
-    "ping_mode": "Smart"
+    "ping_mode": "Extended",
+    "saved_pings": []
 }

@@ -1,4 +1,2 @@
 pythonping
-warnings
-requests
 rich

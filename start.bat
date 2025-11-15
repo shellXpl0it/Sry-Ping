@@ -1,3 +1,3 @@
-@echo off
-python sry.py
+@echo off 
+python3 sry.py
 exit
