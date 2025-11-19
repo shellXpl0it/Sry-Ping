@@ -78,3 +78,7 @@ The Licensed Material is provided "AS IS" without warranty of any kind. The Lice
 
 **Limitation of Liability**
 To the maximum extent permitted by law, the Licensor is not liable for any indirect, incidental, consequential, special, punitive, or exemplary damages arising from the use or inability to use the Licensed Material.
+
+---
+
+Developed by shellxpl0it © 2025
