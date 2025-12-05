@@ -1,4 +1,4 @@
-# Sry-Ping
+# Sry-Ping https://discord.gg/pyynMMZfQT
 
 A modern, feature-rich, cross-platform ping utility built with Python and the Rich library. Sry-Ping provides a visually appealing and informative way to check host latency and gather network information.
 
